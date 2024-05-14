@@ -2,8 +2,6 @@
 
 This markdown file provides a comparison of command line instructions between Linux/Unix and Windows.
 
-# Table of Contents
-
 - [File Operations](#file-operations)
 - [Text Operations](#text-operations)
 - [System Information](#system-information)
@@ -45,7 +43,7 @@ This markdown file provides a comparison of command line instructions between Li
 |--------------------------|------------------------|-----------------------|
 | Display file content     | `cat file_name`        | `type file_name`      |
 | Display first lines of file | `head file_name`     | `more file_name`      |
-| Display last lines of file  | `tail file_name`     | `more file_name`      |
+| Display last lines of file  | `tail file_name`     |       |
 | Search for text in file  | [`grep 'pattern' file_name`](#grep---search-text) | `findstr 'pattern' file_name` |
 
 ## System Information
