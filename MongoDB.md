@@ -20,7 +20,7 @@
 |Count the number of documents inserted|`db.collection_name.count()`|
 |List the documents|`db.collection_name.find()`|
 
-What is the difference between database, collection, and document?
+<strong>What is the difference between database, collection, and document?</strong>
 
 A database is a container for collections. Collections are analogous to tables in relational databases. A document is a record in a collection. 
 
