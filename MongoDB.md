@@ -12,13 +12,13 @@
 
 | Task Description         |  Command       |
 |--------------------------|------------------------|
-|Create a database |`use database_name`|
+|Create a database |`use DATABASE_NAME`|
 |List databases|`show dbs`|
-|Create a collection|`db.createCollection("collection_name")`|
+|Create a collection|`db.createCollection("COLLECTION_NAME")`|
 |List collections|`show collections`|
-|Insert details of a record|`db.collection_name.insert({"field_attribute1":"attribute1","field_attribute2":"attribute2","field_attribute3":"attribute3"})`|
-|Count the number of documents inserted|`db.collection_name.count()`|
-|List the documents|`db.collection_name.find()`|
+|Insert details of a record|`db.COLLECTION_NAME.insert({"FIELD_ATTRIBUTE1":"ATTRIBUTE1","FIELD_ATTRIBUTE2":"ATTRIBUTE2","FIELD_ATTRIBUTE3":"ATTRIBUTE3"})`|
+|Count the number of documents inserted|`db.COLLECTION_NAME.count()`|
+|List the documents|`db.COLLECTION_NAME.find()`|
 
 <strong>What is the difference between database, collection, and document?</strong>
 
@@ -30,4 +30,14 @@ A database is a container for collections. Collections are analogous to tables i
 
 | Task Description         |  Command       |
 |--------------------------|------------------------|
-|||
+|Create a collection|`db.createCollection("COLLECTION_NAME")`|
+|List the first document in the collection|`db.COLLECTION_NAME.findOne()`|
+|List all documents in the collection|`db.COLLECTION_NAME.find()`|
+|List first n documents in the collection|`db.COLLECTION_NAME.find().limit(n)`|
+|Query for `ATTRIBUTE`|`db.COLLECTION_NAME.find({"FIELD_ATTRIBUTE":"ATTRIBUTE"})`|
+|List all the documents with only showing `FIELD_ATTRIBUTE` in the output|`db.COLLECTION_NAME.find({},{"FIELD_ATTRIBUTE":1})`|
+|List all the documents without `FIELD_ATTRIBUTE` in the output|`db.COLLECTION_NAME.find({},{"FIELD_ATTRIBUTE":0})`|
+|Only show `FIELD_ATTRIBUTE2` of the documents which have `ATTRIBUTE1`|`db.COLLECTION_NAME.find({"FIELD_ATTRIBUTE1":"ATTRIBUTE1"},{"FIELD_ATTRIBUTE2":1})`|
+|Add/update a field desciption|`db.COLLECTION_NAME.updateMany({DOCUMENT_TYPE},{$set:{FIELDS_TO_SET}})` <br> `{DOCUMENT_TYPE}` can be blank if you want all the documents to be updated|
+|Remove documents with a cetain `ATTRIBUTE`|`db.COLLECTION_NAME.remove({"FIELD_ATTRIBUTE":"ATTRIBUTE"})` <br>|
+|Remove all documents|`db.COLLECTION_NAME.remove({})`|
